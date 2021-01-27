@@ -3,19 +3,20 @@ const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const mysql = require('mysql')
-const PORT =5000
-
+const PORT = process.env.PORT | 5000
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(express.static('./public'))
 
-app.use(morgan('short'))
+app.use(morgan('combined'))
 
 const router = require('./routes/user.js')
 
 app.use(router)
+app.use(router)
+//app.use(express.static(__dirname))
 
 app.get("/", (req, res) => {
     console.log("Responding to root route")
