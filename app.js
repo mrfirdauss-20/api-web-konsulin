@@ -24,6 +24,17 @@ app.get("/", (req, res) => {
     res.send("Hello from ROOOOOT")
 })
 
+app..get('/times', (req, res) => res.send(showTimes()))
+
+showTimes = () => {
+    let result = '';
+    const times = process.env.TIMES || 5;
+    for (i = 0; i < times; i++) {
+        result += i + ' ';
+    }
+    return result;
+}
+
 app.listen(PORT, () => {
     console.log('Running on', PORT);
 });
