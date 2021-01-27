@@ -9,10 +9,10 @@ router.get('/messages', (req, res) => {
   res.end()
 })
 const connecting = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'rSqii2007',
-  database: 'ustaz_mysql'
+  host: 'remotemysql.com',
+  user: 'MqISQsRFUS',
+  password: 'Zynv6BoeQE',
+  database: 'MqISQsRFUS'
 });
 
 function getConnection() {
@@ -167,6 +167,33 @@ router.post('/tambahArtikel', (req, res) => {
 
   const queryString = "INSERT INTO artikel (judulArtikel, isi, tanggal, penulis, kategori) VALUES (?,?,?, ?, ?)"
   getConnection().query(queryString, [judul, isi,tanggal,penulis, kategori], (err, results, fields) => {
+    if (err) {
+      console.log("Failed to insert new user: " + err)
+      res.sendStatus(500)
+      return
+    }
+
+    console.log("Inserted a new user with id: ", results.insertId);
+    res.end()
+  })
+})
+
+router.put('/editArtikel', (req, res) => {
+  console.log("Trying to create a new user...")
+  console.log("How do we get the form data???")
+
+  const judul = req.body.judulArtikel;
+  const penulis = req.body.penulis;
+  const kategorii = req.body.kategori;
+  const isi = req.body.isi;
+  const arId = req.body.arId;
+
+  const kategori = kategorii.charAt(0).toUpperCase() + kategorii.slice(1)
+  const d = new Date();
+  const tanggal = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate();
+
+  const queryString = "UPDATE artikel SET judulArtikel=$1, isi=$2, tanggal=$3, penulis=$4, kategori=$5, id=$6)"
+  pool.query(queryString, [judul, isi, tanggal, penulis, kategori, arId], (err, results, fields) => {
     if (err) {
       console.log("Failed to insert new user: " + err)
       res.sendStatus(500)
