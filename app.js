@@ -1,9 +1,10 @@
 // load our app server using express somehow....
+const cool = require('cool-ascii-faces');
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const mysql = require('mysql')
-const PORT = process.env.PORT | 5000
+const PORT = process.env.PORT || 5000
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({ extended: false }))
