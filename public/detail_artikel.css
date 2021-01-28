@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+}
+
+body{
+    background-color: white;
+    /* background-image: url('../../img/bg.png');
+    background-image: url('../../img/bg.png');
+    background-repeat: repeat-y;
+    background-size: cover; */
+    background-image: url('https://github.com/IloveNooodles/Konsul.in/blob/main/img/bg.png?raw=true');
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.navbar{
+    background-color: transparent;
+    height: 60px;
+}
+
+#logo{
+    width: 160px;
+}
+
+.navbar-nav{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar-nav .active{
+    background-color: #4E36E5;
+}
+
+.box_nav{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+#searchbar{
+    display: flex;
+    background-color: white;
+    width: 270px;
+    height: 35px;
+    top: 273px;
+    border-radius: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.25s;
+}
+
+#search-icon{
+    margin-left: 10px;
+    margin-top: -4px;
+    height: 20px;
+    width: 20px;
+}
+
+#searchbar input{
+    border: none;
+    margin-left: 10px;
+    width: 80%;
+    height: 90%;
+    outline: none;    
+}
+
+#searchbar:focus-within{
+    border: blue 1px solid;
+}
+
+.atas{
+    height: 80px;
+}
+
+.kategori{
+    width: 150px;
+    margin-top: 5px;
+    background-color: cadetblue;
+    border-radius: 20px;
+    color: black;
+}
+
+.gambar{
+    display: flex;
+    justify-content: center;
+}
+
+.box-gambar img{
+    width:500px;
+    height: 300px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.deskripsi{
+    text-align: justify;
+}
+footer{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: left!important;
+    color: white !important;
+}
+
+
+.site-footer{
+    background-color: black;
+    padding: 45px;
+    font-size: medium;
+    line-height: normal;
+    color: #9c7c7c;
+    font-family: 'Roboto';
+}
+
+.site-footer .container{
+    max-width: 1200px;
+    margin: auto;
+}
+.site-footer .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-footer .col{
+    width: 20%; 
+    display: inline-block;
+    padding: 0 15px;
+    
+}
+.site-footer li{
+    font-size: 18px;
+    line-height: 30px;
+    list-style-type: none;
+    padding-left: 0;
+    
+}
+
+.site-footer h5{
+    font-weight: 500px !important; 
+    font-size: 20px !important;
+    text-transform: uppercase !important;
+    line-height: 40px !important;
+    color: white!important;
+}
+
+.site-footer .hub{
+    float: right;
+    float: bottom;
+
+}
+
+.site-footer button{
+    border: none;
+    border-radius: 6px;
+    background-color: #00C4AC;
+    width: 200px;
+    height: 42px;
+}
+
+.site-footer .hub h5{
+    font-size: 18px !important;
+    text-transform: none !important;
+}
+
+.float{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    
+}   
+
+.my-float{
+    width: 150px;
+}
+
+.site-footer img{
+    width: 200px;
+}
+@media screen and (max-width: 500px)
+{
+    .site-footer img
+    {  
+        width: 130px !important;
+    }
+}

@@ -389,3 +389,10 @@ body{
 #konsultasi img {
     height: 100px;
 }
+
+footer{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: left!important;
+}
