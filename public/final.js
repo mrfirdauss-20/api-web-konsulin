@@ -8,3 +8,8 @@ $(window).scroll(function () {
         $("#myNav").removeClass("berubah");
     }
 });
+
+$('#myNav .navbar-nav a').on('click', function () {
+    $('#myNav .navbar-nav').find('div.active').removeClass('active');
+    $(this).parent('div').addClass('active');
+});
