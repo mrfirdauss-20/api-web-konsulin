@@ -16,6 +16,7 @@ $.getJSON('https://powerful-peak-20198.herokuapp.com/artikel', function (data) {
         $('#aartikel').append('<div class="col"><div class="card card-artikel mb-4"><div class="card-body card-body-artikel mx-2"><div class="box-gambar my-2"><img src="' + data[i].gambar + '"></div><div class="kategori text-center my-3">' + data[i].kategori + '</div><h3>' + data[i].judulArtikel + '</h3><a href="https://powerful-peak-20198.herokuapp.com/artikel/isi/'+(i+1)+'">Baca selengkapnya...</a></div></div></div>')
     });
 });
+
 $.getJSON('https://powerful-peak-20198.herokuapp.com/event', function (data) {
     /*let ustaz = data.ustaz;
     console.log(ustaz)*/
