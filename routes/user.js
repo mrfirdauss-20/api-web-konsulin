@@ -100,7 +100,7 @@ router.get('/artikel/isi/:id', (req, res) => {
   //const connection = getConnection()
 
   const userId = req.params.id
-  const queryString = "SELECT * FROM data_ustaz WHERE id = ?"
+  const queryString = "SELECT * FROM artikel WHERE idartikel = ?"
   connection.query(queryString, [userId], (err, rows, fields) => {
     if (err) {
       console.log("Failed to query for users: " + err)
