@@ -34,6 +34,18 @@ router.get("/ustaz", (req, res) => {
     })
   })
 
+router.get("/event", (req, res) => {
+
+  const queryString = "SELECT * FROM event"
+  connection.query(queryString, (err, rows, fields) => {
+    if (err) {
+      console.log("Failed to query for users: " + err)
+      res.sendStatus(500)
+      return
+    }
+    res.send(rows)
+  })
+})
 
 router.post('/tambahUstaz', (req, res) => {
     console.log("Trying to create a new user...")
@@ -80,6 +92,30 @@ router.get('/ustaz/:id', (req, res) => {
         })
         res.send(users)
     })
+})
+
+router.get('/artikel/isi/:id', (req, res) => {
+  console.log("Fetching user with id: " + req.params.id)
+
+  //const connection = getConnection()
+
+  const userId = req.params.id
+  const queryString = "SELECT * FROM data_ustaz WHERE id = ?"
+  connection.query(queryString, [userId], (err, rows, fields) => {
+    if (err) {
+      console.log("Failed to query for users: " + err)
+      res.sendStatus(500)
+      return
+      // throw err
+    }
+
+    console.log("I think we fetched users successfully")
+
+    const users = rows.map((row) => {
+      return {isi: row.isi}
+    })
+    res.send(users)
+  })
 })
 
 router.get('/ustaz/almamater/:name', (req, res) => {

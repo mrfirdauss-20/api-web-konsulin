@@ -358,6 +358,11 @@ body{
     text-transform: none !important;
 }
 
+.col .card-artikel .card-body-artikel .box-gambar img{
+    width: 250px;
+    height: 150px;
+}
+
 .float{
     position: fixed;
     right: 20px;
