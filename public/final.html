@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="final.css">
+
+    <title>Konsul.in</title>
+</head>
+
+<body>
+    <nav id="myNav" class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <img id="logo" class="logo" src="https://github.com/IloveNooodles/Konsul.in/blob/main/Media/1_tulisan_rev.png?raw=true" alt="logo konsul.in">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav text-center">
+                    <div class="container box_nav active">
+                        <a href="#home">Home</a>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="container box_nav">
+                        <a href="#profil">Profil</a>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="container box_nav">
+                        <a href="#artikel">Artikel</a>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="container box_nav">
+                        <a href="#event">Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="atas"></div>
+
+        <div id="search">
+            <div id="searchbar">
+                <div id="search-icon">
+                    <img src="https://raw.githubusercontent.com/IloveNooodles/Konsul.in/fdc0d96ccf7e94b4bf17b7ace08787a8fd975422/img/VectorSearch.svg" alt="">
+                </div>
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="container deskripsi text-white">
+            <img src="https://raw.githubusercontent.com/IloveNooodles/Konsul.in/fdc0d96ccf7e94b4bf17b7ace08787a8fd975422/img/VectorSearch.svg" alt="">
+            <p>Konsul.in adalah platform yang menyediakan konsultasi mengenai masalah agama. Konsul.in memberikan solusi
+                dengan bantuan ahli yang terpercaya untuk konsultasi masalah agama.</p>
+        </div>
+    </section>
+
+
+    <section id="profil">
+        <div class="container container-profil">
+            <div class="container judul text-center">
+                <h1 class="text-white">Profil Ustaz</h1>
+            </div>
+            <div class="row justify-content-center" id="ustaad">
+            </div>
+        </div>
+    </section>
+
+    <section id="artikel">
+        <div class="container judul text-center">
+            <h1 class="text-white">Artikel</h1>
+            <a href="#" class="mx-3">Terbaru</a>
+            <a href="#" class="mx-3">Terpopuler</a>
+        </div>
+
+        <div class="container content pt-5">
+            <div class="row">
+                <div class="col">
+                    <div class="card card-artikel mb-4">
+                        <div class="card-body card-body-artikel mx-2">
+                            <div class="box-gambar my-2">
+                                diisi gambar
+                            </div>
+                            <div class="kategori text-center my-3">Kategori</div>
+                            <h3>Judul Artikel</h3>
+                            <a href="#">Baca selengkapnya...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-artikel mb-4">
+                        <div class="card-body card-body-artikel mx-2">
+                            <div class="box-gambar my-2">
+                                diisi gambar
+                            </div>
+                            <div class="kategori text-center my-3">Kategori</div>
+                            <h3>Judul Artikel</h3>
+                            <a href="#">Baca selengkapnya...</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card card-artikel mb-4">
+                        <div class="card-body card-body-artikel mx-2">
+                            <div class="box-gambar my-2">
+                                diisi gambar
+                            </div>
+                            <div class="kategori text-center my-3">Kategori</div>
+                            <h3>Judul Artikel</h3>
+                            <a href="#">Baca selengkapnya...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="event">
+        <div class="container judul text-center">
+            <h1 class="text-white">Events</h1>
+        </div>
+
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="gambar">
+                        <img src="https://github.com/IloveNooodles/Konsul.in/blob/main/Gambar_carousel/1.jpg?raw=true" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="gambar">
+                        <img src="https://github.com/IloveNooodles/Konsul.in/blob/main/Gambar_carousel/3.jpg?raw=true" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="gambar">
+                        <img src="https://github.com/IloveNooodles/Konsul.in/blob/main/Gambar_carousel/2.jpg?raw=true" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="https://github.com/IloveNooodles/Konsul.in/blob/main/Media/1_tulisan_rev.png?raw=true" alt="" style="width: 229px;">
+                </div>
+
+                <div class="col">
+                    <h5>Hubungi Kami</h6>
+                        <ul>
+                            <li><i class="fa fa-whatsapp" style="font-size:22px; color: white;"></i>+6282245200501</li>
+                        </ul>
+                </div>
+
+                <div class="col">
+                    <h5>Informasi</h5>
+                    <ul>
+                        <li>Home</li>
+                        <li>Profile</li>
+                        <li>Article</li>
+                        <li>Event</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5>Bantu Kami</h4>
+                        <ul>
+                            <li>Kritik dan Saran</li>
+                            <li>Donasi</li>
+                        </ul>
+                </div>
+
+                <div class="col">
+                    <div class="hub">
+                        <p style="height: 80px;"></p>
+                        <h5>Anda seorang ustaz?</h>
+                            <button class="hubung" style="color: #D9D9D9; font-family: 'Roboto'; font-size: 14px; "
+                                onclick="window.location.href='https\:\/\/wa.me\/6282245200501?tect=Assalamualaikum%20Saya%20ingint%20mengaujkan%20diri%20sebagai%20pakar%20di%20konsulin';">Hubungi
+                                Kami</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Whatsapp -->
+    <!-- <div id="konsultasi">
+      <a href="https://wa.me/">
+          <img src="../new/images/konsultasi.png">
+      </a>
+    </div> -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="final.js"></script>
+    <script src="finalJquery.js"></script>
+</body>
+
+</html>

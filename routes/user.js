@@ -42,9 +42,11 @@ router.post('/tambahUstaz', (req, res) => {
     const NamaLengkap = req.body.NamaLengkap;
     const almamater = req.body.almamater;
     const photo = req.body.photo;
+    const kategorii = req.body.kategori;
+    const kat = kategorii.charAt(0).toUpperCase() + kategorii.slice(1)
   
-    const queryString = "INSERT INTO data_ustaz (NamaLengkap, almamater, photo) VALUES (?, ?, ?)"
-    getConnection().query(queryString, [NamaLengkap, almamater, photo], (err, results, fields) => {
+    const queryString = "INSERT INTO data_ustaz (NamaLengkap, almamater, photo, kategori) VALUES (?, ?, ?,?)"
+    getConnection().query(queryString, [NamaLengkap, almamater, photo, kat], (err, results, fields) => {
       if (err) {
         console.log("Failed to insert new user: " + err)
         res.sendStatus(500)
@@ -74,7 +76,7 @@ router.get('/ustaz/:id', (req, res) => {
         console.log("I think we fetched users successfully")
 
         const users = rows.map((row) => {
-        return {NamaLengkap: row.NamaLengkap, Almamater: row.almamater, photo: row.photo}
+        return {NamaLengkap: row.NamaLengkap, Almamater: row.almamater, photo: row.photo,kategori:row.kategori}
         })
         res.send(users)
     })
@@ -98,7 +100,7 @@ router.get('/ustaz/almamater/:name', (req, res) => {
     console.log("I think we fetched users successfully")
 
     const users = rows.map((row) => {
-      return { NamaLengkap: row.NamaLengkap, Almamater: row.almamater, photo: row.photo }
+      return { NamaLengkap: row.NamaLengkap, Almamater: row.almamater, photo: row.photo, kategori: row.kategori }
     })
     res.send(users)
   })
@@ -204,5 +206,78 @@ router.put('/editArtikel', (req, res) => {
     res.end()
   })
 })
+
+//
+router.get('/ustaz/kategori/:name', (req, res) => {
+  console.log("Fetching user with id: " + req.params.id)
+
+  //const connection = getConnection()
+
+  const username = req.params.name
+  const queryString = "SELECT * FROM data_ustaz WHERE kategori = ?"
+  connection.query(queryString, [username], (err, rows, fields) => {
+    if (err) {
+      console.log("Failed to query for users: " + err)
+      res.sendStatus(500)
+      return
+      // throw err
+    }
+
+    console.log("I think we fetched users successfully")
+
+    const users = rows.map((row) => {
+      return { NamaLengkap: row.NamaLengkap, Almamater: row.almamater, photo: row.photo, kategori:row.kategori }
+    })
+    res.send(users)
+  })
+})
+
+
+//
+router.get('/artikel/kategori/:name', (req, res) => {
+  console.log("Fetching user with id: " + req.params.id)
+
+  //const connection = getConnection()
+
+  const username = req.params.name;
+  const queryString = "SELECT * FROM artikel WHERE kategori = ?"
+  connection.query(queryString, [username], (err, rows, fields) => {
+    if (err) {
+      console.log("Failed to query for users: " + err)
+      res.sendStatus(500)
+      return
+      // throw err
+    }
+
+    console.log("I think we fetched users successfully")
+
+  
+    res.send(rows)
+  })
+})
+
+//
+router.get('/artikel/cari/:name', (req, res) => {
+  console.log("Fetching user with cari: " + req.params.name)
+
+  //const connection = getConnection()
+
+  const username = req.params.name;
+  const queryString = "SELECT * FROM artikel WHERE judulArtikel LIKE \"*?*\""
+  connection.query(queryString, [username], (err, rows, fields) => {
+    if (err) {
+      console.log("Failed to query for users: " + err)
+      res.sendStatus(500)
+      return
+      // throw err
+    }
+
+    console.log("I think we fetched users successfully")
+
+
+    res.send(rows)
+  })
+})
+
 
 module.exports = router
