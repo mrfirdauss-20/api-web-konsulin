@@ -1,4 +1,4 @@
-# api-web-konsulin
+# API Konsulin
 Bismillah Assalamualaikum
 
 Ini adalah API Website dan Web Konsulin.
