@@ -1,0 +1,32 @@
+{
+  "name": "konsul.in",
+  "version": "1.0.0",
+  "description": "wa api for konsul.in",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/mrfirdauss-20/konsul.in.git"
+  },
+  "keywords": [
+    "whatsapp-api",
+    "node.js"
+  ],
+  "author": "almostDone",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "http": "0.0.1-security",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "qrcode": "^1.4.4",
+    "request": "^2.88.2",
+    "session": "^0.1.0",
+    "socket.io": "^3.1.0",
+    "whatsapp-web.js": "^1.12.0"
+  }
+}
